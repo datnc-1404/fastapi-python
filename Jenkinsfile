@@ -17,8 +17,8 @@ pipeline {
         }
         stage("SSH Server") {
             steps {
-                sshagent(['ssh-remote']) {
-                        sh 'ssh -o StrictHostKeyChecking=no -l datnc 172.28.216.30 touch test.txt'
+                sshagent(['ssh-remote-ubuntu-container']) {
+                        sh 'ssh -o StrictHostKeyChecking=no -l root 172.17.0.3 touch test.txt'
                     }
             }
         }
