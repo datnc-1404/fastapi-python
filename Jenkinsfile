@@ -6,7 +6,7 @@ pipeline {
                 git 'https://github.com/datnc-1404/fastapi-python.git'
             }
         }
-         stage('Clone'){
+         stage('Build image'){
             steps {
                 // This step should not normally be used in your script. Consult the inline help for details.
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
