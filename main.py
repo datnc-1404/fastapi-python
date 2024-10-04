@@ -7,7 +7,7 @@ app = FastAPI()
 # Định nghĩa route để trả về "Hello, World!"
 @app.get("/")
 def read_root():
-    return {"message": "Hello, Nguyen Chi Dat!"}
+    return {"message": "Hello, Nguyen Chi Dat v1!"}
 
 # Block if __name__ == "__main__"
 if __name__ == "__main__":
