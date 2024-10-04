@@ -15,5 +15,12 @@ pipeline {
                 }
             }
         }
+        stage("SSH Server") {
+            steps {
+                sshagent(['ssh-remote']) {
+                        sh 'ssh -o StrictHostKeyChecking=no -l datnc 172.28.216.30 touch test.txt'
+                    }
+            }
+        }
     }
 }
